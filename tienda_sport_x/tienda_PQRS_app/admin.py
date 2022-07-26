@@ -2,12 +2,12 @@ from django.contrib import admin
 from tienda_PQRS_app.models import Pqrs_person,Pqrs_tiket
 
 class person_admin(admin.ModelAdmin):
-    readonly_fields=('created',)
     # permite visualisar en la pagina admin de una manera estetica
-    list_display=   ('type_document','identification_number','name','last_name','num_cell','num_house','email','created')     
+    list_display=   ('type_document','identification_number','name','last_name','num_cell','num_house','email')     
     list_filter=    ('identification_number','name')            # menu de filtros
     search_fields=  ('identification_number','name')            # opcion buscar
-         
+    
+
             
 
 class tiket_admin(admin.ModelAdmin):
