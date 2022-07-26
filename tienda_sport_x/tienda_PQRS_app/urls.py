@@ -1,6 +1,7 @@
 from django.urls import path
-from . import views
+from .views import Pqrs_view
 
 urlpatterns = [
-    path('',    views.Pqrs, name="pqrs"),
+    path('pqrs/',Pqrs_view.as_view(), name="pqrs_list"),
+    path('pqrs/<int:id>',Pqrs_view.as_view(), name="pqrs_process"),
 ]
