@@ -65,7 +65,7 @@ class Pqrs_view (View):
 
 class option(View):
 
-    @method_decorator(csrf_exempt)                          # metodo que ignora los parametros de seguridad CSRF
+    @method_decorator(csrf_exempt)                    
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
 
@@ -94,5 +94,3 @@ class option(View):
         else:                                              
             datos={'message':'pqrs not found...'}
             return JsonResponse(datos) 
-
-    
