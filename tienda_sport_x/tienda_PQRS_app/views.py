@@ -21,7 +21,6 @@ class Pqrs_view (View):
             else :                                                  # de lo contrario informa que no encontro listas
                 datos={'message':'pqrs not found...'}
             return JsonResponse(datos)                              # devuelve la informacion como .Jason
-
         else:
             pqrss=list(Pqrs.objects.values())                       # consulta y lo convierte en una lista
             if len(pqrss)>0:                                    
@@ -55,11 +54,45 @@ class Pqrs_view (View):
         pass
 
 
-    def delete(self,request,id):
-        pqrss=list(Pqrs.objects.filter(id=id).values())
-        if len(pqrss)>0: 
-            Pqrs.objects.filter(id=id).delete()
+    def delete(self,request,id):                            # funcion post
+        pqrss=list(Pqrs.objects.filter(id=id).values())     # consulta, filtra por id y lo convierte en una lista
+        if len(pqrss)>0:                                    # evalua si existe o esta vacion 
+            Pqrs.objects.filter(id=id).delete()             # elimina 
             datos={'message':'Success'}
         else:
             datos={'message':'pqrs not found...'}
         return JsonResponse(datos)
+
+class option(View):
+
+    @method_decorator(csrf_exempt)                          # metodo que ignora los parametros de seguridad CSRF
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(request, *args, **kwargs)
+
+
+    def get(self,request,id=0):
+
+        if(id==1):
+            type_document=[
+                ('CC','cedula de ciudadania' ),
+                ('TI','tarjeta de identidad' ),
+                ('CE','cedula de extranjeria'),
+            ]
+            datos={'message':'Success','type_document': type_document}
+            return JsonResponse(datos)
+
+        elif(id==2):                                             
+            type_ticket=[
+                ('P','pregunta' ),
+                ('Q','queja' ),
+                ('R','reclamo'),
+                ('S','sugerencias')
+            ]
+            datos={'message':'Success','type_ticket': type_ticket}
+            return JsonResponse(datos)
+        
+        else:                                              
+            datos={'message':'pqrs not found...'}
+            return JsonResponse(datos) 
+
+    

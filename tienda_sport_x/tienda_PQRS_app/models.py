@@ -1,20 +1,20 @@
 from tabnanny import verbose
 from django.db import models
 
-class Pqrs(models.Model):
-
-    TYPE_DOCUMENT_CHOICES=[
-        ('CC','cedula de ciudadania' ),
-        ('TI','tarjeta de identidad' ),
-        ('CE','cedula de extranjeria'),
-    ]
-
-    TICKET_TYPE_CHOICES=[
+TICKET_TYPE_CHOICES=[
         ('P','pregunta' ),
         ('Q','queja' ),
         ('R','reclamo'),
         ('S','sugerencias')
     ]
+
+TYPE_DOCUMENT_CHOICES=[
+        ('CC','cedula de ciudadania' ),
+        ('TI','tarjeta de identidad' ),
+        ('CE','cedula de extranjeria'),
+    ]
+
+class Pqrs(models.Model):
 
     type_document=  models.CharField(max_length=30, choices= TYPE_DOCUMENT_CHOICES, default= 'CC')
     identification_number=models.IntegerField()      
