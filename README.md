@@ -6,7 +6,14 @@ que fue modelada para recibir informacion PQRs <br>
 
 ## como hacer uso ? <br>
 
+- **para sinconizar la base de datos** <br>
+    se utilizo MYSQL y se configura en tienda_sport_x/tienda_sport_x/db.py <br>
+    *modificando:* <br>
+        - NAME<br>
+        - PASSWORD<br>
+
 ### para utilizar las api rest ingrese al link: <br>
+
 
 - **para agregar :** <br>
     [localhost:8000/api/pqrs/](localhost:8000/api/pqrs/) # en el body introduce con este esquema<br>
