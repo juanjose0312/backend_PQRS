@@ -1,57 +1,59 @@
 # juan_jose-sport_x_inlazz
 introduccion 
 
-esta es un app encargada de maneja el CRUD en una base de datos
-que fue modelada para recibir informacion PQRs 
+esta es un app encargada de maneja el CRUD en una base de datos <br>
+que fue modelada para recibir informacion PQRs <br>
 
-como hacer uso ?
+como hacer uso ? <br>
 
-para utilizar las api rest ingrese al link:
+para utilizar las api rest ingrese al link: <br>
 
-- para agregar : 
-    http://127.0.0.1:8000/api/pqrs/ # en el body introduce con este esquema
-    {
-        "type_document":    "",         (type:string, max length=30)
-        "identification_number": ,      (type:Integer,max num = 2147483647)
-        "name":             "",         (type:string, max length=30)    
-        "last_name":        "",         (type:string, max length=30)
-        "num_cell":           ,         (type:PositiveBigInteger, max num =9223372036854775807)
-        "num_house":          ,         (type:PositiveBigInteger, max num =9223372036854775807)
-        "email":            "",         (type:email , max length=50)
-        "ticket_title":     "",         (type:string, max length=30)
-        "ticket_type":      "",         (type:string, max length=30)
-        "ticket_content":   "",         (type:string, max length=250)   
-        "state":         false,         (type:boolean)
-    }
+- para agregar : <br>
+    http://127.0.0.1:8000/api/pqrs/ # en el body introduce con este esquema<br>
+    {<br>
+        "type_document":    "",         (type:string, max length=30)<br>   
+        "identification_number": ,      (type:Integer,max num = 2147483647)<br>
+        "name":             "",         (type:string, max length=30)<br>  
+        "last_name":        "",         (type:string, max length=30)<br>  
+        "num_cell":           ,         (type:PositiveBigInteger, max num =9223372036854775807)<br>
+        "num_house":          ,         (type:PositiveBigInteger, max num =9223372036854775807)<br>
+        "email":            "",         (type:email , max length=50)<br>
+        "ticket_title":     "",         (type:string, max length=30)<br>
+        "ticket_type":      "",         (type:string, max length=30)<br>
+        "ticket_content":   "",         (type:string, max length=250)<br>   
+        "state":         false,         (type:boolean)<br>
+    }<br>
 
-- para listar :
-    http://127.0.0.1:8000/api/pqrs/
+- para listar :<br>
+    http://127.0.0.1:8000/api/pqrs/<br>
 
-- para selecionar :
-    http://127.0.0.1:8000/api/pqrs/ #al final agrega el numero de id que desea listar
+- para selecionar :<br>
+    http://127.0.0.1:8000/api/pqrs/ #al final agrega el numero de id que desea listar<br>
 
-- para borrar :
-    http://127.0.0.1:8000/api/pqrs/ #al final agrega el numero de id que desea eliminar
+- para borrar :<br>
+    http://127.0.0.1:8000/api/pqrs/ #al final agrega el numero de id que desea eliminar<br>
 
-- para revisar las opciones de tipos de documento :
+- para revisar las opciones de tipos de documento :<br>
+    http://127.0.0.1:8000/api/option/1<br>
 
-    TYPE_DOCUMENT_CHOICES=[
-            ('CC','cedula de ciudadania' ),
-            ('TI','tarjeta de identidad' ),
-            ('CE','cedula de extranjeria'),
-        ]
+    TYPE_DOCUMENT_CHOICES=[<br>
+            ('CC','cedula de ciudadania' ),<br>
+            ('TI','tarjeta de identidad' ),<br>
+            ('CE','cedula de extranjeria'),<br>
+        ]<br>
 
-- para revisar las opciones de tipos de PQRS  :
+- para revisar las opciones de tipos de PQRS  :<br>
+    http://127.0.0.1:8000/api/option/2<br>
 
-    TICKET_TYPE_CHOICES=[
-            ('P','pregunta' ),
-            ('Q','queja' ),
-            ('R','reclamo'),
-            ('S','sugerencias')
-        ]
+    TICKET_TYPE_CHOICES=[<br>
+            ('P','pregunta' ),<br>
+            ('Q','queja' ),<br>
+            ('R','reclamo'),<br>
+            ('S','sugerencias')<br>
+        ]<br>
 
-- para ingresar a la pagina del admin :
-    http://127.0.0.1:8000/admin/
-    super usuario
-        user :      juan
-        password:   inlazz2022
+- para ingresar a la pagina del admin :<br>
+    http://127.0.0.1:8000/admin/<br>
+    super usuario<br>
+        user :      juan<br>
+        password:   inlazz2022<br>
