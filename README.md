@@ -10,11 +10,11 @@ que fue modelada para recibir informacion PQRs <br>
 
 - **para agregar :** <br>
     localhost:8000/api/pqrs/ # en el body introduce con este esquema<br>
-    `{<br>
-        "type_document":    "",         (type:string, max length=30)<br>   
-        "identification_number": ,      (type:Integer,max num = 2147483647)<br>
-        "name":             "",         (type:string, max length=30)<br>  
-        "last_name":        "",         (type:string, max length=30)<br>  
+    `{
+        "type_document":    "",         (type:string, max length=30)   
+        "identification_number": ,      (type:Integer,max num = 2147483647)
+        "name":             "",         (type:string, max length=30)  
+        "last_name":        "",         (type:string, max length=30)  
         "num_cell":           ,         (num : 10-13 digitos)<br>
         "num_house":          ,         (num : 7-11  digitos)<br>
         "email":            "",         (type:email , max length=50)<br>
